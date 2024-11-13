@@ -1,0 +1,26 @@
+# For python
+.idea/
+__pycache__
+*.egg-info
+*.pot
+*.py[co]
+
+
+# For Mac
+.DS_Store
+*/.DS_Store
+
+
+# Common
+newdata
+*.log
+*.rdb
+*.pth
+*.mp3
+*.mp4
+*.jpg
+*.png
+*.avi
+*.wav
+*.pt
+
