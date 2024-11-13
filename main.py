@@ -29,13 +29,13 @@ def main():
     # 分词
     segs = data['Content'].apply(lambda x:' '.join(jieba.cut(x)))
     # ti-idf构建
-    tf_idf = TfidfVectorizer(stop_words=stopwords, max_features=1000,lowercase=False)
+    tf_idf = TfidfVectorizer(stop_words=stopwords, max_features=1000, lowercase=False)
     # 拟合
     tf_idf.fit(segs)
     # 转换
     X = tf_idf.transform(segs)
     # 分割数据
-    X_train,X_test, y_train, y_test = train_test_split(X, data["Class"], random_state=0)
+    X_train, X_test, y_train, y_test = train_test_split(X, data["Class"], random_state=0)
     print(X_train[:2])
     print(y_train[:2])
     # 实例化朴素贝叶斯
